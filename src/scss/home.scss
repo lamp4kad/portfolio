@@ -1,0 +1,260 @@
+//====================================================================================================
+body{
+
+  &.lock{
+    overflow: hidden;
+  }
+}
+
+.page {
+
+}
+
+.main-block {
+  font-family: "Gilroy-Medium";
+  @include adaptiveValue("padding-top", 130, 65, 768, 320, 2);
+  @include adaptiveValue("padding-bottom", 104, 83, 768, 320, 2);
+  // .main-block__container
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  // .main-block__name
+
+  &__name {
+    flex: 1 1 auto;
+    font-family: 'Gilroy-Bold';
+    font-size: 47.3392px;
+    line-height: 59px;
+    color: #070707;
+    max-width: 123.51px;
+  }
+
+  // .main-block__work
+
+  &__work {
+    font-size: 18px;
+    line-height: 22px;
+    color: #070707;
+    max-width: 155.65px;
+  }
+
+  // .main-block__translate
+
+  &__translate {
+    flex: 0 1 auto;
+    font-family: 'Gilroy-Bold';
+    font-size: 16px;
+    line-height: 20px;
+    color: #828282;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    cursor: pointer;
+
+    @media (max-width: $mobileSmall) {
+      position: fixed;
+      font-size: 34px;
+      line-height: 42px;
+      z-index: 30;
+      right: 26px;
+      bottom: 57px;
+      transform: rotate(0deg);
+      transform: translate(200%, 0);
+      transition: all 0.7s;
+      &.menu-open{
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  &__language{
+    transition: all .3s;
+
+    &.active{
+      color: black;
+    }
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin: 0 0 30.64px 0;
+
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+    }
+  }
+
+  &__stick {
+    color: black;
+  }
+
+  &__big-image {
+    width: 100%;
+    padding: 0 0 41.17% 0;
+  }
+
+  &__active {
+    color: black;
+  }
+}
+
+.about-me {
+  background: #F6F6F6;
+  // .about-me__container
+
+  &__container {
+    @include adaptiveValue("padding-top", 120, 81, 768, 375, 1);
+    @include adaptiveValue("padding-bottom", 107, 76, 768, 375, 1);
+  }
+
+  // .about-me__title
+
+  &__title {}
+
+  // .about-me__text
+
+  &__text {}
+}
+
+.block {
+
+  &__container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 46px;
+  }
+
+  // .block__title
+
+  &__title {
+    font-family: "Gilroy-Bold";
+    font-size: 34px;
+    line-height: 42px;
+    color: #070707;
+  }
+
+  // .block__text
+
+  &__text {
+    @include adaptiveValue("max-width", 485, 316, 768, 375, 1);
+    font-family: 'Gilroy-Medium';
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #070707;
+  }
+
+  &__plits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    row-gap: 81.7px;
+    gap: 81.7px 9%;
+  }
+}
+
+.plit {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  width: 161px;
+  // .plit__image-ibg
+
+  &__image-ibg {
+    margin: 0 0 24px 0;
+    padding: 0 0 88px 0;
+    width: 89px;
+  }
+
+  &__text {
+    font-family: 'Gilroy-Bold';
+    flex: 1 1 auto;
+    max-width: 60.80%;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #828282;
+  }
+
+  &__image-ibg-small {
+    width: 58px;
+  }
+
+  &> :last-child{
+    margin: 42px 0 0 0;
+  }
+}
+
+.skills {
+  // .skills__container
+
+  &__container {
+    @include adaptiveValue("padding-top", 91, 83, 768, 375, 1);
+    @include adaptiveValue("padding-bottom", 110, 98, 768, 375, 1);
+  }
+}
+
+.portfolio-example {
+  width: 100%;
+  // .portfolio-example__block
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 99px;
+    padding: 0;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 44.88px;
+    transition: all .3s;
+
+    &:hover{
+      scale: 1.09;
+    }
+  }
+
+  // .portfolio-example__text
+
+  &__text {
+    flex: 0 1 1%;
+    display: inline-block;
+    font-family: 'Gilroy-Medium';
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    text-decoration: underline;
+    color: #070707;
+  }
+}
+
+.portfolio-example-ibg {
+  padding: 0 0 55.53% 0;
+}
+
+.portfolio {
+  background: #F6F6F6;
+
+  // .portfolio__container
+
+  &__container {
+    @include adaptiveValue("padding-top", 112, 81, 768, 375, 1);
+    @include adaptiveValue("padding-bottom", 96, 80, 768, 375, 1);
+  }
+}
+
+//====================================================================================================
